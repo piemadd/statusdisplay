@@ -2,6 +2,7 @@ export default function TransitCard({ trip, nameDict }) {
   const lineName = nameDict[trip.routeID]
     ? nameDict[trip.routeID]
     : trip.routeID;
+
   const runNum = trip.isSch == "1" ? "Scheduled" : "#" + trip.runNum;
 
   const totalMinutesTilArr = parseInt(
