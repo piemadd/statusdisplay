@@ -1,9 +1,8 @@
 import TransitCard from "../cards/transitCard.jsx";
 
 export default function Station({ stationName, stationData, nameDict }) {
-
   return (
-    <section className={"outerCard station"}>
+    <section key={`${stationName}`} className={"outerCard station"}>
       <h2>{stationName}</h2>
       {stationData.map((trip) => {
         return (

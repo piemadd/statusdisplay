@@ -22,11 +22,12 @@ function App() {
       meta: {},
     },
   });
+
   const [lastUpdated, setLastUpdated] = useState(
     new Date(new Date().valueOf() - 300000)
   );
 
-  setInterval(() => {
+  const interval = setInterval(() => {
     console.log(
       "Last updated: " +
         lastUpdated.toLocaleTimeString("en-US", { hour12: false })
