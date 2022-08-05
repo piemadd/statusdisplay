@@ -19,7 +19,7 @@ export default function Forecast({ forecastType, forecastData, tz }) {
       <section key={`${forecastTypeName}`} className={"outerCard"}>
         <h2>{forecastTypeName}</h2>
         {forecastData.periods.map((forecastDataPoint, i) => {
-          if ((i == 0 || i % 3 == 0) && i < 24) {
+          if (((i == 0 || i % 3 == 0) && i < 24) || forecastType == 'daily') {
             return (
               <WeatherCard
                 forecastType={forecastType}
